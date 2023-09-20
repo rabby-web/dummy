@@ -4,6 +4,7 @@ import ProductCart from "../ProductCart/ProductCart";
 
 const Product = () => {
     const products = useLoaderData()
+    const {price,title,description,images,id} = products;
     // console.log(products.products)
     return (
         <div className="container mx-auto text-white">
