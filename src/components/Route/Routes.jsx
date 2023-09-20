@@ -3,7 +3,6 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Product from "../Pages/Product/Product";
 import Cart from "../Pages/Cart/Cart";
-import Dashboard from "../Dashboard/Dashboard";
 import ProductLayout from "../layout/ProductLayout";
 import DummyProduct from "../Pages/DummyProduct/DummyProduct";
 
@@ -18,7 +17,8 @@ const myCreateRoute = createBrowserRouter([
             },
             {
                 path: '/product',
-                element: <Product></Product>
+                element: <Product></Product>,
+                loader: () => fetch('https://dummyjson.com/products')
             },
             {
                 path: '/cart',
